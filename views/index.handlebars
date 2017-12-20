@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-
+<html>
 <center>
-<img src="https://media.giphy.com/media/3o7TKUGccxlaQqdgRO/giphy.gif" alt="" style="max-width: 500px" />
+<img src="https://media.giphy.com/media/3o7TKUGccxlaQqdgRO/giphy.gif" alt=""/>
 <br>
 <br>
-</center>
 <div class="col-md-4">
 
   <form class="col-md-12" action="/burger/add" method="POST">
     <div class="col-md-11 col-md-offset-1 text-center" style="margin-top:15px">
-        <label for="burger" style="color: black; font-family: 'Comic Sans MS', cursive, sans-serif">Order Your Burger!</label>
+        <label for="burger" style=" font-size: 30pt; color: green; font-family: 'Bungee', cursive">Order Your Burger!</label>
         <input type="text" id="burger" name="user_burger" required>
     </div>
   </form>
 </div>
+</center>
 
 <div class="col-md-4">
-
 
   <div class="col-md-12 text-center">
       {{#each burger}}
@@ -24,7 +23,7 @@
           <form class="col-md-12" action="/burger/update/{{this.id}}?_method=PUT" method="POST">
           <div class="burger_name" style="font-size: 14pt; padding: 10px; color: black; font-family: 'Comic Sans MS', cursive, sans-serif" id="burger1">{{this.burger_name}}
           </div>
-          <button class="btn btn-warning btn-xs" type="submit"><img src="https://media.giphy.com/media/3o7TKUGccxlaQqdgRO/giphy.gif" alt="" style="max-width: 50px" /></button>
+          <button class="btn btn-warning btn-xs" type="submit"><img src="https://mms.businesswire.com/media/20160728005265/en/536898/5/devour_logo.jpg" alt="" style="max-width: 80px" /></button>
           </form>
         {{/unless}}
       {{/each}}
@@ -38,9 +37,10 @@
           <form class="col-md-12" action="/burger/delete/{{this.id}}?_method=PUT" method="POST">
           <div class="burger_name" style="font-size: 14pt; padding: 10px; color: black; font-family: 'Comic Sans MS', cursive, sans-serif">{{this.burger_name}}
           </div>
-            <button class="btn btn-warning btn-xs" type="submit"><img src="https://media.giphy.com/media/3o7TKUGccxlaQqdgRO/giphy.gif" alt="" style="max-width: 50px" /></button>
+            <button class="btn btn-warning btn-xs" type="submit"><img src="https://img2.cgtrader.com/items/793182/6f8ac7ba7e/large/cartoon-cheeseburger-low-poly-3d-model-low-poly-obj-3ds-fbx-blend-mtl-tga.png" alt="" style="max-width: 50px" /></button>
           </form>
       {{/if}}
     {{/each}}
   </div>
 </div>
+</html>
