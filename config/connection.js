@@ -15,7 +15,7 @@ var devConn = mysql.createConnection({
 
 var connection;
 
-if (process.env.JAWSDB_URL) {
+if (process.env.NODE_ENV === 'production') {
     connection = jawsDBConn;
 } else {
     connection = devConn;
